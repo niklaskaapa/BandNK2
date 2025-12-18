@@ -1,0 +1,101 @@
+@import url("https://fonts.cdnfonts.com/css/pastor-of-muppets");
+
+.metallica-text {
+  font-family: "Pastor of Muppets", sans-serif;
+  font-size: 4rem; /* Större text ser ofta bättre ut för denna stil */
+  animation-name: pulseGlow; /* Vilken animation? */
+  animation-duration: 3s; /* Hur lång tid tar ett varv? */
+  animation-iteration-count: infinite; /* Hur många gånger? (oändligt) */
+  animation-timing-function: ease-in-out; /*Mjuk start och mjukt slut*/
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #121612;
+}
+
+header {
+  background-color: #333;
+  color: #fc0101;
+  padding: 10px 0;
+  text-align: center;
+  /*background: rgba(12, 20, 45, 0.85); /* Mörkblå, nästan svart, 85% synlig */
+  /*border: 1px solid #4cc9f0; /* Tunn "elektrisk" ram */
+  /*box-shadow: 0 0 15px rgba(76, 201, 240, 0.3); /* Litet blått sken (glow) */
+  color: #f71f1f; /* #f0f8ff Kall vit text */
+  padding: 2rem;
+  border-radius: 8px;
+}
+.bgcolor {
+  /*min-height: calc(100vh - 312.3px);*/
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.metallica-text:hover {
+  color: #fc0101;
+  /*box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);  starkare skugga vid hover */
+  cursor: pointer; /* pekare vid hover */
+  animation: none;
+  transform: scale(2.05) rotate(10deg); /* lätt förstoring och rotation vid hover */
+}
+nav {
+  background-color: #333;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none; /* Ta bort standardpunktlista */
+  justify-content: center; /* Centrera innehållet horisontellt */
+  display: flex; /* Använd flexbox för layout */
+  align-items: center; /* Centrera innehållet vertikalt */
+  margin: 0; /* Ta bort standardmarginal */
+  padding: 0; /* Ta bort standardpadding */
+  gap: 20px; /* Avstånd mellan länkar */
+}
+nav > ul > li > a {
+  color: #fc0101;
+  display: inline-block;
+  transition: transform 0.5s ease;
+  text-decoration: none;
+  padding: 0.1rem; /* Inre marginal för bättre klickyta */
+  border-radius: 5px;
+}
+nav > ul > li > a:hover {
+  background-color: #fc0101;
+  box-shadow: 6px 6px 25px rgb(226, 216, 14); /* starkare skugga vid hover */
+  color: black;
+  cursor: pointer; /* pekare vid hover */
+  transform: scale(1.5) rotate(-360deg); /* lätt förstoring och rotation vid hover */
+
+  width: 100%; /*breden på länken vid hover */
+}
+
+section {
+  border: 2px solid #0c0c0c; /* Tunn "elektrisk" ram */
+  box-shadow: 0 0 17px rgba(166, 4, 4, 0.3); /* Litet blått sken (glow) */
+  background-color: #f6f6f6d7;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 8px;
+}
+footer {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(252, 1, 1, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(255, 196, 1, 0.568);
+    transform: scale(1.02);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(252, 1, 1, 0.5);
+    transform: scale(1);
+  }
+}
